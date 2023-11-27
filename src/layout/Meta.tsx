@@ -121,8 +121,8 @@ const Meta = (props: IMetaProps) => {
             },
             "@type": "BlogPosting",
             "url": "${AppConfig.url}${router.basePath}${addTrailingSlash(
-                  router.asPath
-                )}",
+              router.asPath,
+            )}",
             "publisher": {
               "@type": "Organization",
               "logo": {
@@ -137,13 +137,13 @@ const Meta = (props: IMetaProps) => {
             "image": ["${AppConfig.url}${router.basePath}${props.post.image}"],
             "datePublished": "${new Date(props.post.date).toISOString()}",
             "dateModified": "${new Date(
-              props.post.modified_date
+              props.post.modified_date,
             ).toISOString()}",
             "mainEntityOfPage": {
               "@type": "WebPage",
               "@id": "${AppConfig.url}${router.basePath}${addTrailingSlash(
-                  router.asPath
-                )}"
+                router.asPath,
+              )}"
             },
             "@context": "http://schema.org"
           }`,
